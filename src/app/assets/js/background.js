@@ -17,9 +17,7 @@ function sendMessageToContentScripts(tabId, message, sendResponse) {
 }
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-
-    var tabId = sender.tab.id;
-    var url = sender.tab.url;
+    console.log(message);
     var func = message.func;
     if (func.indexOf('bg-', 0) > -1) {
         message.func = message.func.substring(3);
@@ -28,7 +26,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     switch (func) {
      
     case 'bg-open-cart-page':
-         window.chrome.tabs.create({ url: cartURL });
+         chrome.tabs.create({ url: cartURL });
         break;
     
     default:

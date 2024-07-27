@@ -58,6 +58,7 @@ function chivicanWorker() {
                     },
                     error: function (xhr, textStatus, errorThrown) {
                         console.log('Error in Operation');
+                        window.chrome.storage.local.set({ 'cvc-cart-storage': null });
                     }
                 });
             }
