@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Mavan.vn Order Tool",
   "short_name": "Mavan.vn Order Tool",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Mavan.vn - Order Tool",
   "icons": {
     "16": "app/assets/icons/icon_16_active.png",
@@ -118,8 +118,6 @@
     }
   ],
   "permissions": [
-    "cookies",
-    "activeTab",
     "storage"
   ],
   "host_permissions": [
